@@ -1,5 +1,4 @@
 public class Computador {
-
     private String modelo;
     private Fabricante marca;
     private float preco;
@@ -69,7 +68,7 @@ public class Computador {
     public String toString() {
         final StringBuilder sb = new StringBuilder("Computador{");
         sb.append("modelo='").append(modelo).append('\'');
-        sb.append(", marca='").append(marca).append('\'');
+        sb.append(", marca ='").append(marca).append('\'');
         sb.append(", preco=").append(preco);
         sb.append(", memoriaRAM=").append(memoriaRAM);
         sb.append(", espacoHD=").append(espacoHD);
