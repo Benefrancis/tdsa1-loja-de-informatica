@@ -1,11 +1,13 @@
 public class Main {
     public static void main(String[] args) {
 
+        Fabricante dell = new Fabricante("Dell");
+        Fabricante hp = new Fabricante("HP");
+
 
         Computador comp0 = new Computador();
-        //  comp0.modelo = "Vostro";
         comp0.setModelo("    Vostro    ");
-        comp0.setMarca("DELL");
+        comp0.setMarca(dell);
         comp0.setPreco(5999.99F);
         comp0.setProcessador("Intel i7");
         comp0.setMemoriaRAM(64);
@@ -14,9 +16,8 @@ public class Main {
 
 
         Computador comp1 = new Computador();
-        // comp1.modelo = "HP123";
         comp1.setModelo("HP123");
-        comp1.setMarca("HP");
+        comp1.setMarca(hp);
         comp1.setPreco(7999.99F);
         comp1.setProcessador("Intel i9");
         comp1.setMemoriaRAM(64);
@@ -24,9 +25,8 @@ public class Main {
         comp1.setPlacaDeVideoDedicada(false);
 
         Computador comp2 = new Computador();
-        //  comp2.modelo = "Latitude";
         comp2.setModelo("Latitude");
-        comp2.setMarca("DELL");
+        comp2.setMarca(dell);
         comp2.setPreco(4999.99F);
         comp2.setProcessador("Intel i5");
         comp2.setMemoriaRAM(32);

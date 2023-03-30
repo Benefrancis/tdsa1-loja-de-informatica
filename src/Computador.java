@@ -1,13 +1,12 @@
 public class Computador {
 
     private String modelo;
-    private String marca;
+    private Fabricante marca;
     private float preco;
     private int memoriaRAM;
     private int espacoHD;
     private String processador;
     private boolean placaDeVideoDedicada;
-
 
     public String getModelo() {
         return this.modelo;
@@ -17,12 +16,12 @@ public class Computador {
         this.modelo = m != null ? m.toUpperCase().trim() : null;
     }
 
-    public String getMarca() {
+    public Fabricante getMarca() {
         return marca;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca != null ? marca.toUpperCase().trim() : null;
+    public void setMarca(Fabricante marca) {
+        this.marca = marca;
     }
 
     public float getPreco() {
