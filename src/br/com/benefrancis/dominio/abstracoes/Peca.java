@@ -1,4 +1,11 @@
+package br.com.benefrancis.dominio.abstracoes;
+
+import br.com.benefrancis.dominio.fabricante.Fabricante;
+
 public abstract class Peca implements Negociavel {
+
+    private String modelo;
+
     private double valorCompra;
     private double margemDeLucro;
 
@@ -44,7 +51,7 @@ public abstract class Peca implements Negociavel {
 
     @Override
     public String toString() {
-        return "Peca{" +
+        return "br.com.benefrancis.dominio.abstracoes.Peca{" +
                 "valorCompra=" + valorCompra +
                 ", margemDeLucro=" + margemDeLucro +
                 ", fabricante=" + fabricante +

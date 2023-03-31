@@ -1,5 +1,10 @@
+package br.com.benefrancis.dominio.computador;
+
+import br.com.benefrancis.dominio.abstracoes.Peca;
+import br.com.benefrancis.dominio.enumeracoes.TipoGabinete;
+
 public class Gabinete extends Peca {
-    private String modelo;
+
     private float altura;
     private float largura;
     private float profundidade;
@@ -9,22 +14,13 @@ public class Gabinete extends Peca {
     public Gabinete() {
     }
 
-    public Gabinete(String modelo, float altura, float largura, float profundidade, TipoGabinete tipo) {
-        this.modelo = modelo;
+    public Gabinete(float altura, float largura, float profundidade, TipoGabinete tipo) {
         this.altura = altura;
         this.largura = largura;
         this.profundidade = profundidade;
         this.tipo = tipo;
     }
 
-    public String getModelo() {
-        return modelo;
-    }
-
-    public Gabinete setModelo(String modelo) {
-        this.modelo = modelo;
-        return this;
-    }
 
     public float getAltura() {
         return altura;
@@ -65,8 +61,7 @@ public class Gabinete extends Peca {
     @Override
     public String toString() {
         return "Gabinete{" +
-                "modelo='" + modelo + '\'' +
-                ", altura=" + altura +
+                "altura=" + altura +
                 ", largura=" + largura +
                 ", profundidade=" + profundidade +
                 ", tipo=" + tipo +

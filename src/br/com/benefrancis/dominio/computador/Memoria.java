@@ -1,3 +1,8 @@
+package br.com.benefrancis.dominio.computador;
+
+import br.com.benefrancis.dominio.abstracoes.Peca;
+import br.com.benefrancis.dominio.enumeracoes.TipoMemoria;
+
 public class Memoria extends Peca {
 
     private String modelo;
@@ -68,7 +73,7 @@ public class Memoria extends Peca {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Memoria{");
+        final StringBuilder sb = new StringBuilder("br.com.benefrancis.dominio.computador.Memoria{");
         sb.append("modelo='").append(modelo).append('\'');
         sb.append(", capacidade=").append(capacidade);
         sb.append(", MHZ=").append(MHZ);

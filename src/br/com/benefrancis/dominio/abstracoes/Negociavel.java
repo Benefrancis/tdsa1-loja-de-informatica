@@ -1,3 +1,5 @@
+package br.com.benefrancis.dominio.abstracoes;
+
 public interface Negociavel {
 
     public default double valorVenda() {

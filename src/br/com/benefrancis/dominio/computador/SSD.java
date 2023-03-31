@@ -1,4 +1,9 @@
-public class SSD extends Peca{
+package br.com.benefrancis.dominio.computador;
+
+import br.com.benefrancis.dominio.abstracoes.Armazenamento;
+import br.com.benefrancis.dominio.abstracoes.Peca;
+
+public class SSD extends Peca implements Armazenamento {
 
     private int capacidade;
 
@@ -32,7 +37,7 @@ public class SSD extends Peca{
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("SSD{");
+        final StringBuilder sb = new StringBuilder("br.com.benefrancis.dominio.computador.SSD{");
         sb.append("capacidade=").append(capacidade);
         sb.append(", velocidade=").append(velocidade);
         sb.append('}');
