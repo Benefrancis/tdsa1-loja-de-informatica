@@ -1,4 +1,4 @@
-public class SSD extends Peca{
+public class SSD extends Peca {
 
     private int capacidade;
 

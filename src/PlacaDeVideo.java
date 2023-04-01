@@ -1,6 +1,6 @@
 public class PlacaDeVideo extends Peca {
-    private String modelo;
 
+    private String modelo;
 
     public PlacaDeVideo(String modelo) {
         this.modelo = modelo;

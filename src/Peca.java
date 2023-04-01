@@ -1,8 +1,25 @@
 public abstract class Peca implements Negociavel {
+
+    public double getValor() {
+        return this.getValorCompra() * (1 + (this.getMargemDeLucro() / 100));
+    }
+
+    private String modelo;
+
     private double valorCompra;
     private double margemDeLucro;
 
     private Fabricante fabricante;
+
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public Peca setModelo(String modelo) {
+        this.modelo = modelo;
+        return this;
+    }
 
     @Override
     public double getValorCompra() {
@@ -45,9 +62,7 @@ public abstract class Peca implements Negociavel {
     @Override
     public String toString() {
         return "Peca{" +
-                "valorCompra=" + valorCompra +
-                ", margemDeLucro=" + margemDeLucro +
-                ", fabricante=" + fabricante +
+                " fabricante=" + fabricante +
                 '}';
     }
 }

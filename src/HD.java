@@ -1,4 +1,4 @@
-public class HD extends Peca{
+public class HD extends Peca {
 
     private int capacidade;
 

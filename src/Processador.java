@@ -1,5 +1,7 @@
 public class Processador extends Peca {
-    private String modelo;
+
+
+    private Socket socket;
 
     private int quantidadeDeNucleos;
 
@@ -11,21 +13,11 @@ public class Processador extends Peca {
     public Processador() {
     }
 
-    public Processador(String modelo, int quantidadeDeNucleos, int quantidadeDeThreads, int cache) {
-        this.modelo = modelo;
-        this.quantidadeDeNucleos = quantidadeDeNucleos;
-        this.quantidadeDeThreads = quantidadeDeThreads;
-        this.cache = cache;
+
+    public Processador(Socket socket) {
+        this.socket = socket;
     }
 
-    public String getModelo() {
-        return modelo;
-    }
-
-    public Processador setModelo(String modelo) {
-        this.modelo = modelo;
-        return this;
-    }
 
     public int getQuantidadeDeNucleos() {
         return quantidadeDeNucleos;
@@ -56,12 +48,11 @@ public class Processador extends Peca {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Processador{");
-        sb.append("modelo='").append(modelo).append('\'');
-        sb.append(", quantidadeDeNucleos=").append(quantidadeDeNucleos);
-        sb.append(", quantidadeDeThreads=").append(quantidadeDeThreads);
-        sb.append(", cache=").append(cache);
-        sb.append('}');
-        return sb.toString();
+        return "Processador{" +
+                "socket=" + socket +
+                ", quantidadeDeNucleos=" + quantidadeDeNucleos +
+                ", quantidadeDeThreads=" + quantidadeDeThreads +
+                ", cache=" + cache +
+                "} " + super.toString();
     }
 }

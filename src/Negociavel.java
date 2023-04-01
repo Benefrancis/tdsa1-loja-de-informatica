@@ -1,8 +1,6 @@
 public interface Negociavel {
 
-    public default double valorVenda() {
-        return getValorCompra() * (1 + (getMargemDeLucro() / 100));
-    }
+    public double getValor();
 
     public double getValorCompra();
 
