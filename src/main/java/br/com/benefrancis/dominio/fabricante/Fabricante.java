@@ -1,5 +1,7 @@
 package br.com.benefrancis.dominio.fabricante;
 
+import com.google.gson.Gson;
+
 public class Fabricante {
     private String nome;
 
@@ -18,18 +20,6 @@ public class Fabricante {
 
     @Override
     public String toString() {
-
-        String ret = """
-                
-                Fabricante{
-                
-                    nome =    """ +nome+ """ 
-                
-                }
-                
-                """;
-
-
-        return  ret;
+        return new Gson().toJson(this);
     }
 }

@@ -14,5 +14,4 @@ public interface Negociavel {
 
     public Negociavel setMargemDeLucro(double margem);
 
-
 }

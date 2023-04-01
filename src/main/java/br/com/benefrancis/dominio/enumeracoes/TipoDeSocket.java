@@ -1,6 +1,7 @@
 package br.com.benefrancis.dominio.enumeracoes;
 
 import br.com.benefrancis.dominio.fabricante.Fabricante;
+import com.google.gson.Gson;
 
 /**
  * Soquete é o componente com o qual você vai prender/instalar seu processador no PC
@@ -57,10 +58,6 @@ public enum TipoDeSocket {
 
     @Override
     public String toString() {
-        return "TipoDeSocket{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", fabricante=" + fabricante +
-                '}';
+        return new Gson().toJson(this);
     }
 }
