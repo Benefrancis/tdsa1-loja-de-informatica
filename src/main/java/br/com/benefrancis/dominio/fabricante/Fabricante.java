@@ -18,8 +18,18 @@ public class Fabricante {
 
     @Override
     public String toString() {
-        return "br.com.benefrancis.dominio.fabricante.Fabricante{" +
-                "nome='" + nome + '\'' +
-                '}';
+
+        String ret = """
+                
+                Fabricante{
+                
+                    nome =    """ +nome+ """ 
+                
+                }
+                
+                """;
+
+
+        return  ret;
     }
 }

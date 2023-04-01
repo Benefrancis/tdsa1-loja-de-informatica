@@ -1,6 +1,7 @@
 package br.com.benefrancis.dominio.computador;
 
 import br.com.benefrancis.dominio.abstracoes.Armazenamento;
+import com.google.gson.Gson;
 
 public class Computador {
 
@@ -78,13 +79,6 @@ public class Computador {
 
     @Override
     public String toString() {
-        return "Computador{" +
-                "processador=" + processador +
-                ", placaMae=" + placaMae +
-                ", memoria=" + memoria +
-                ", gabinete=" + gabinete +
-                ", armazenamento=" + armazenamento +
-                ", placaDeVideo=" + placaDeVideo +
-                '}';
+        return new Gson().toJson(this);
     }
 }

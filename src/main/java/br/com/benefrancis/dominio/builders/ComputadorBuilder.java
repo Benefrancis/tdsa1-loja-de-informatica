@@ -3,7 +3,7 @@ package br.com.benefrancis.dominio.builders;
 import br.com.benefrancis.dominio.abstracoes.Armazenamento;
 import br.com.benefrancis.dominio.computador.*;
 
-public class ComputadorBuilder implements Builder {
+public class ComputadorBuilder implements Builder<Computador> {
 
     private Processador processador;
 
@@ -16,7 +16,6 @@ public class ComputadorBuilder implements Builder {
     private Armazenamento armazenamento;
 
     private PlacaDeVideo placaDeVideo;
-
 
     @Override
     public ComputadorBuilder setProcessador(Processador processador) {
@@ -54,8 +53,7 @@ public class ComputadorBuilder implements Builder {
         return this;
     }
 
-
-    public Computador build(){
-        return new Computador();
+    public Computador build() {
+        return new Computador(processador, placaMae, memoria, gabinete, armazenamento, placaDeVideo);
     }
 }

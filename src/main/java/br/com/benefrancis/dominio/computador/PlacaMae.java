@@ -4,6 +4,8 @@ import br.com.benefrancis.dominio.abstracoes.Peca;
 import br.com.benefrancis.dominio.enumeracoes.TipoDeSocket;
 import br.com.benefrancis.dominio.enumeracoes.TipoGabinete;
 import br.com.benefrancis.dominio.enumeracoes.TipoMemoria;
+import br.com.benefrancis.dominio.fabricante.Fabricante;
+import com.google.gson.Gson;
 
 public class PlacaMae extends Peca {
 
@@ -15,14 +17,29 @@ public class PlacaMae extends Peca {
 
     private boolean wifiIntegrado;
 
+
+    private int quantidadeDeCPU;
+
     public PlacaMae() {
     }
 
-    public PlacaMae(TipoMemoria tipoMemoria, TipoGabinete tipoGabinete, TipoDeSocket socket, boolean wifiIntegrado) {
+
+    public PlacaMae(String modelo, Fabricante fabricante, TipoMemoria tipoMemoria, TipoGabinete tipoGabinete, TipoDeSocket socket, boolean wifiIntegrado, byte quantidadeDeCPU) {
+        super(modelo, fabricante);
         this.tipoMemoria = tipoMemoria;
         this.tipoGabinete = tipoGabinete;
         this.socket = socket;
         this.wifiIntegrado = wifiIntegrado;
+        this.quantidadeDeCPU = quantidadeDeCPU;
+    }
+
+    public int getQuantidadeDeCPU() {
+        return quantidadeDeCPU;
+    }
+
+    public PlacaMae setQuantidadeDeCPU(int quantidadeDeCPU) {
+        this.quantidadeDeCPU = quantidadeDeCPU;
+        return this;
     }
 
     public TipoMemoria getTipoMemoria() {
@@ -57,13 +74,10 @@ public class PlacaMae extends Peca {
         this.wifiIntegrado = wifiIntegrado;
     }
 
+
+
     @Override
     public String toString() {
-        return "PlacaMae{" +
-                "tipoMemoria=" + tipoMemoria +
-                ", tipoGabinete=" + tipoGabinete +
-                ", socket=" + socket +
-                ", wifiIntegrado=" + wifiIntegrado +
-                "} " + super.toString();
+        return new Gson().toJson(this);
     }
 }

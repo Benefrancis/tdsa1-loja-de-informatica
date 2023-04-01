@@ -2,10 +2,10 @@ package br.com.benefrancis.dominio.computador;
 
 import br.com.benefrancis.dominio.abstracoes.Peca;
 import br.com.benefrancis.dominio.enumeracoes.TipoMemoria;
+import com.google.gson.Gson;
 
 public class Memoria extends Peca {
 
-    private String modelo;
 
     private int capacidade;
 
@@ -18,22 +18,13 @@ public class Memoria extends Peca {
     public Memoria() {
     }
 
-    public Memoria(String modelo, int capacidade, int MHZ, TipoMemoria tipo, boolean RGB) {
-        this.modelo = modelo;
+    public Memoria(int capacidade, int MHZ, TipoMemoria tipo, boolean RGB) {
         this.capacidade = capacidade;
         this.MHZ = MHZ;
         this.tipo = tipo;
         this.RGB = RGB;
     }
 
-    public String getModelo() {
-        return modelo;
-    }
-
-    public Memoria setModelo(String modelo) {
-        this.modelo = modelo;
-        return this;
-    }
 
     public int getCapacidade() {
         return capacidade;
@@ -73,13 +64,6 @@ public class Memoria extends Peca {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("br.com.benefrancis.dominio.computador.Memoria{");
-        sb.append("modelo='").append(modelo).append('\'');
-        sb.append(", capacidade=").append(capacidade);
-        sb.append(", MHZ=").append(MHZ);
-        sb.append(", tipo=").append(tipo);
-        sb.append(", RGB=").append(RGB);
-        sb.append('}');
-        return sb.toString();
+        return new Gson().toJson(this);
     }
 }

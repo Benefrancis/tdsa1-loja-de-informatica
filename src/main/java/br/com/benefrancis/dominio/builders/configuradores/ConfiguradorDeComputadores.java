@@ -1,4 +1,4 @@
-package br.com.benefrancis.dominio.configuradores;
+package br.com.benefrancis.dominio.builders.configuradores;
 
 import br.com.benefrancis.dominio.builders.Builder;
 import br.com.benefrancis.dominio.builders.ComputadorBuilder;
@@ -9,16 +9,23 @@ import br.com.benefrancis.dominio.enumeracoes.TipoMemoria;
 import br.com.benefrancis.dominio.fabricante.Fabricante;
 
 public class ConfiguradorDeComputadores {
-    public Builder configuraCoputadorGamerAMD() {
 
-        ComputadorBuilder builder = new ComputadorBuilder();
+    private Builder<Computador> builder;
+
+    public ConfiguradorDeComputadores(Builder builder) {
+        this.builder = builder;
+    }
+
+    public Computador configuraCoputadorGamerAMD() {
 
         var socket = TipoDeSocket.AM5;
         var tipoMemoria = TipoMemoria.DDR5;
+        int quantidadeDeCPU = 1;
 
         var processador = new Processador();
-
         processador.setFabricante(socket.getFabricante());
+        processador.setSocket(socket);
+        processador.setQuantidadeDeNucleos(16).setQuantidadeDeThreads(32).setCache(128);
 
         var motherboard = new PlacaMae();
         motherboard.setFabricante(new Fabricante("ASUS"));
@@ -26,28 +33,28 @@ public class ConfiguradorDeComputadores {
         motherboard.setTipoMemoria(tipoMemoria);
         motherboard.setTipoGabinete(TipoGabinete.ATX);
         motherboard.setWifiIntegrado(true);
+        motherboard.setQuantidadeDeCPU(quantidadeDeCPU);
 
         var ssd = new SSD();
         ssd.setFabricante(new Fabricante("Kingston"));
         ssd.setCapacidade(1024).setVelocidade(65356);
 
         var video = new PlacaDeVideo();
-        video.setFabricante(new Fabricante("Asus "));
+        video.setFabricante(new Fabricante("Asus"));
         video.setModelo("RTX3070TI-O8G-V2-GAMING");
-
 
         var gabinete = new Gabinete();
         gabinete.setFabricante(new Fabricante("CoolerMaster"));
         gabinete.setLargura(1).setAltura(1).setProfundidade(2);
         gabinete.setTipo(TipoGabinete.ATX);
 
-        builder.setProcessador(processador)
+        this.builder.setProcessador(processador)
                 .setPlacaMae(motherboard)
                 .setArmazenamento(ssd)
                 .setPlacaDeVideo(video)
                 .setGabinete(gabinete);
 
-        return builder;
+        return this.builder.build();
     }
 
 }

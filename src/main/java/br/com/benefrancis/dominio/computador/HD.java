@@ -2,6 +2,7 @@ package br.com.benefrancis.dominio.computador;
 
 import br.com.benefrancis.dominio.abstracoes.Armazenamento;
 import br.com.benefrancis.dominio.abstracoes.Peca;
+import com.google.gson.Gson;
 
 public class HD extends Peca implements Armazenamento {
 
@@ -38,10 +39,6 @@ public class HD extends Peca implements Armazenamento {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("br.com.benefrancis.dominio.computador.HD{");
-        sb.append("capacidade=").append(capacidade);
-        sb.append(", velocidade=").append(velocidade);
-        sb.append('}');
-        return sb.toString();
+        return new Gson().toJson(this);
     }
 }

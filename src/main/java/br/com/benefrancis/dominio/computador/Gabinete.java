@@ -2,6 +2,7 @@ package br.com.benefrancis.dominio.computador;
 
 import br.com.benefrancis.dominio.abstracoes.Peca;
 import br.com.benefrancis.dominio.enumeracoes.TipoGabinete;
+import com.google.gson.Gson;
 
 public class Gabinete extends Peca {
 
@@ -60,11 +61,6 @@ public class Gabinete extends Peca {
 
     @Override
     public String toString() {
-        return "Gabinete{" +
-                "altura=" + altura +
-                ", largura=" + largura +
-                ", profundidade=" + profundidade +
-                ", tipo=" + tipo +
-                "} " + super.toString();
+        return new Gson().toJson(this);
     }
 }

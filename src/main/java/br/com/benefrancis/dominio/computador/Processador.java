@@ -2,6 +2,7 @@ package br.com.benefrancis.dominio.computador;
 
 import br.com.benefrancis.dominio.abstracoes.Peca;
 import br.com.benefrancis.dominio.enumeracoes.TipoDeSocket;
+import com.google.gson.Gson;
 
 public class Processador extends Peca {
 
@@ -15,6 +16,7 @@ public class Processador extends Peca {
 
     private int cache;
 
+
     public Processador() {
     }
 
@@ -24,6 +26,34 @@ public class Processador extends Peca {
         this.quantidadeDeNucleos = quantidadeDeNucleos;
         this.quantidadeDeThreads = quantidadeDeThreads;
         this.cache = cache;
+    }
+
+
+    public int getQuantidadeDeNucleos() {
+        return quantidadeDeNucleos;
+    }
+
+    public Processador setQuantidadeDeNucleos(int quantidadeDeNucleos) {
+        this.quantidadeDeNucleos = quantidadeDeNucleos;
+        return this;
+    }
+
+    public int getQuantidadeDeThreads() {
+        return quantidadeDeThreads;
+    }
+
+    public Processador setQuantidadeDeThreads(int quantidadeDeThreads) {
+        this.quantidadeDeThreads = quantidadeDeThreads;
+        return this;
+    }
+
+    public int getCache() {
+        return cache;
+    }
+
+    public Processador setCache(int cache) {
+        this.cache = cache;
+        return this;
     }
 
     public TipoDeSocket getSocket() {
@@ -37,11 +67,6 @@ public class Processador extends Peca {
 
     @Override
     public String toString() {
-        return "Processador{" +
-                "socket=" + socket +
-                ", quantidadeDeNucleos=" + quantidadeDeNucleos +
-                ", quantidadeDeThreads=" + quantidadeDeThreads +
-                ", cache=" + cache +
-                "} " + super.toString();
+        return new Gson().toJson(this);
     }
 }
