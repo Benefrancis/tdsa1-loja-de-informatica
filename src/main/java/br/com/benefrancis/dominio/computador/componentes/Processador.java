@@ -1,10 +1,10 @@
-package br.com.benefrancis.dominio.computador;
+package br.com.benefrancis.dominio.computador.componentes;
 
-import br.com.benefrancis.dominio.abstracoes.Peca;
-import br.com.benefrancis.dominio.enumeracoes.TipoDeSocket;
+import br.com.benefrancis.dominio.computador.abstracoes.Componente;
+import br.com.benefrancis.dominio.computador.componentes.enumeracoes.TipoDeSocket;
 import com.google.gson.Gson;
 
-public class Processador extends Peca {
+public class Processador extends Componente {
 
 
     private TipoDeSocket socket;

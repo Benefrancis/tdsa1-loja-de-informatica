@@ -1,11 +1,11 @@
-package br.com.benefrancis.dominio.builders.configuradores;
+package br.com.benefrancis.dominio.computador.builders.configuradores;
 
-import br.com.benefrancis.dominio.builders.Builder;
-import br.com.benefrancis.dominio.builders.ComputadorBuilder;
+import br.com.benefrancis.dominio.computador.builders.Builder;
 import br.com.benefrancis.dominio.computador.*;
-import br.com.benefrancis.dominio.enumeracoes.TipoDeSocket;
-import br.com.benefrancis.dominio.enumeracoes.TipoGabinete;
-import br.com.benefrancis.dominio.enumeracoes.TipoMemoria;
+import br.com.benefrancis.dominio.computador.componentes.*;
+import br.com.benefrancis.dominio.computador.componentes.enumeracoes.TipoDeSocket;
+import br.com.benefrancis.dominio.computador.componentes.enumeracoes.TipoGabinete;
+import br.com.benefrancis.dominio.computador.componentes.enumeracoes.TipoMemoria;
 import br.com.benefrancis.dominio.fabricante.Fabricante;
 
 public class ConfiguradorDeComputadores {

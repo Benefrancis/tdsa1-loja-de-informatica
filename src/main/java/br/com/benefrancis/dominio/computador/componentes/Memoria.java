@@ -1,10 +1,10 @@
-package br.com.benefrancis.dominio.computador;
+package br.com.benefrancis.dominio.computador.componentes;
 
-import br.com.benefrancis.dominio.abstracoes.Peca;
-import br.com.benefrancis.dominio.enumeracoes.TipoMemoria;
+import br.com.benefrancis.dominio.computador.abstracoes.Componente;
+import br.com.benefrancis.dominio.computador.componentes.enumeracoes.TipoMemoria;
 import com.google.gson.Gson;
 
-public class Memoria extends Peca {
+public class Memoria extends Componente {
 
 
     private int capacidade;

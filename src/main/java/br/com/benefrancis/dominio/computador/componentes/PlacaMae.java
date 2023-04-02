@@ -1,13 +1,13 @@
-package br.com.benefrancis.dominio.computador;
+package br.com.benefrancis.dominio.computador.componentes;
 
-import br.com.benefrancis.dominio.abstracoes.Peca;
-import br.com.benefrancis.dominio.enumeracoes.TipoDeSocket;
-import br.com.benefrancis.dominio.enumeracoes.TipoGabinete;
-import br.com.benefrancis.dominio.enumeracoes.TipoMemoria;
+import br.com.benefrancis.dominio.computador.abstracoes.Componente;
+import br.com.benefrancis.dominio.computador.componentes.enumeracoes.TipoDeSocket;
+import br.com.benefrancis.dominio.computador.componentes.enumeracoes.TipoGabinete;
+import br.com.benefrancis.dominio.computador.componentes.enumeracoes.TipoMemoria;
 import br.com.benefrancis.dominio.fabricante.Fabricante;
 import com.google.gson.Gson;
 
-public class PlacaMae extends Peca {
+public class PlacaMae extends Componente {
 
     private TipoMemoria tipoMemoria;
 

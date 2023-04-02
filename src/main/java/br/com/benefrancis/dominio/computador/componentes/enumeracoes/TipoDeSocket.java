@@ -1,4 +1,4 @@
-package br.com.benefrancis.dominio.enumeracoes;
+package br.com.benefrancis.dominio.computador.componentes.enumeracoes;
 
 import br.com.benefrancis.dominio.fabricante.Fabricante;
 import com.google.gson.Gson;

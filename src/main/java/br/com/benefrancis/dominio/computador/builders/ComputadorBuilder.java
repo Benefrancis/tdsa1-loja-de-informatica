@@ -1,7 +1,8 @@
-package br.com.benefrancis.dominio.builders;
+package br.com.benefrancis.dominio.computador.builders;
 
-import br.com.benefrancis.dominio.abstracoes.Armazenamento;
+import br.com.benefrancis.dominio.computador.abstracoes.Armazenamento;
 import br.com.benefrancis.dominio.computador.*;
+import br.com.benefrancis.dominio.computador.componentes.*;
 
 public class ComputadorBuilder implements Builder<Computador> {
 

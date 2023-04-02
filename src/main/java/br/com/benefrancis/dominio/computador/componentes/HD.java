@@ -1,10 +1,10 @@
-package br.com.benefrancis.dominio.computador;
+package br.com.benefrancis.dominio.computador.componentes;
 
-import br.com.benefrancis.dominio.abstracoes.Armazenamento;
-import br.com.benefrancis.dominio.abstracoes.Peca;
+import br.com.benefrancis.dominio.computador.abstracoes.Armazenamento;
+import br.com.benefrancis.dominio.computador.abstracoes.Componente;
 import com.google.gson.Gson;
 
-public class HD extends Peca implements Armazenamento {
+public class HD extends Componente implements Armazenamento {
 
     private int capacidade;
 

@@ -1,16 +1,16 @@
-package br.com.benefrancis.dominio.abstracoes;
+package br.com.benefrancis.dominio.computador.abstracoes;
 
 import br.com.benefrancis.dominio.fabricante.Fabricante;
 import com.google.gson.Gson;
 
-public abstract class Peca {
+public abstract class Componente {
     private String modelo;
     private Fabricante fabricante;
 
-    public Peca() {
+    public Componente() {
     }
 
-    public Peca(String modelo, Fabricante fabricante) {
+    public Componente(String modelo, Fabricante fabricante) {
         this.modelo = modelo;
         this.fabricante = fabricante;
     }
@@ -19,7 +19,7 @@ public abstract class Peca {
         return modelo;
     }
 
-    public Peca setModelo(String modelo) {
+    public Componente setModelo(String modelo) {
         this.modelo = modelo;
         return this;
     }
@@ -28,7 +28,7 @@ public abstract class Peca {
         return fabricante;
     }
 
-    public Peca setFabricante(Fabricante fabricante) {
+    public Componente setFabricante(Fabricante fabricante) {
         this.fabricante = fabricante;
         return this;
     }

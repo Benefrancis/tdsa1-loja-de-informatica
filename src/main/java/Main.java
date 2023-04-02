@@ -1,6 +1,6 @@
-import br.com.benefrancis.dominio.builders.ComputadorBuilder;
+import br.com.benefrancis.dominio.computador.builders.ComputadorBuilder;
 import br.com.benefrancis.dominio.computador.Computador;
-import br.com.benefrancis.dominio.builders.configuradores.ConfiguradorDeComputadores;
+import br.com.benefrancis.dominio.computador.builders.configuradores.ConfiguradorDeComputadores;
 
 public class Main {
     public static void main(String[] args) {

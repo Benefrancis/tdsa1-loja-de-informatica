@@ -1,6 +1,7 @@
 package br.com.benefrancis.dominio.computador;
 
-import br.com.benefrancis.dominio.abstracoes.Armazenamento;
+import br.com.benefrancis.dominio.computador.abstracoes.Armazenamento;
+import br.com.benefrancis.dominio.computador.componentes.*;
 import com.google.gson.Gson;
 
 public class Computador {

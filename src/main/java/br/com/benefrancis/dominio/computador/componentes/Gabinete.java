@@ -1,10 +1,10 @@
-package br.com.benefrancis.dominio.computador;
+package br.com.benefrancis.dominio.computador.componentes;
 
-import br.com.benefrancis.dominio.abstracoes.Peca;
-import br.com.benefrancis.dominio.enumeracoes.TipoGabinete;
+import br.com.benefrancis.dominio.computador.abstracoes.Componente;
+import br.com.benefrancis.dominio.computador.componentes.enumeracoes.TipoGabinete;
 import com.google.gson.Gson;
 
-public class Gabinete extends Peca {
+public class Gabinete extends Componente {
 
     private float altura;
     private float largura;
