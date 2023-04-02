@@ -48,8 +48,15 @@ public class ConfiguradorDeComputadores {
         gabinete.setLargura(1).setAltura(1).setProfundidade(2);
         gabinete.setTipo(TipoGabinete.ATX);
 
+        var memoria = new Memoria();
+        memoria.setCapacidade(64).setFabricante(new Fabricante("Corsair")).setModelo("CMT64GX5M2B5200C40");
+        memoria.setTipo(TipoMemoria.DDR5);
+        memoria.setMHZ(5200);
+        memoria.setRGB(true);
+
         this.builder.setProcessador(processador)
                 .setPlacaMae(motherboard)
+                .setMemoria(memoria)
                 .setArmazenamento(ssd)
                 .setPlacaDeVideo(video)
                 .setGabinete(gabinete);

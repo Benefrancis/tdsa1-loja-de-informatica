@@ -8,7 +8,6 @@ public class Main {
         ComputadorBuilder builder = new ComputadorBuilder();
         ConfiguradorDeComputadores configurador = new ConfiguradorDeComputadores(builder);
         Computador coputador = configurador.configuraCoputadorGamerAMD();
-
         System.out.println(coputador);
 
     }

@@ -2,7 +2,10 @@ package br.com.benefrancis.dominio.computador.builders;
 
 import br.com.benefrancis.dominio.computador.abstracoes.Armazenamento;
 import br.com.benefrancis.dominio.computador.*;
+import br.com.benefrancis.dominio.computador.abstracoes.Componente;
 import br.com.benefrancis.dominio.computador.componentes.*;
+
+import java.util.*;
 
 public class ComputadorBuilder implements Builder<Computador> {
 
@@ -55,6 +58,14 @@ public class ComputadorBuilder implements Builder<Computador> {
     }
 
     public Computador build() {
-        return new Computador(processador, placaMae, memoria, gabinete, armazenamento, placaDeVideo);
+        Map<String, Componente> componentes = new TreeMap();
+        componentes.put("processador",processador);
+        componentes.put("motherboard", placaMae);
+        componentes.put("memoria", memoria);
+        componentes.put("gabinete", gabinete);
+        componentes.put("armazenamento",(Componente) armazenamento);
+        componentes.put("video", placaDeVideo);
+        Computador computador = new Computador(componentes);
+        return computador;
     }
 }
