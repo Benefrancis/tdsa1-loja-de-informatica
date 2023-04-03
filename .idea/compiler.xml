@@ -9,8 +9,5 @@
         <module name="tdsa1-loja-de-informatica" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="tdsa1-loja-de-informatica" target="19" />
-    </bytecodeTargetLevel>
   </component>
 </project>
